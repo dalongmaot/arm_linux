@@ -422,22 +422,43 @@ dep_files = a.d b.d c.d d.d e.d abc
 
 
 
+### 字段错误（Segmentation Fault）
+
+**可能出现的原因**
+
+（1）、内存越界，数组越界，变量类型不一致等
+
+**一定要注意内存越界问题**！！
+
+之前这里我的代码是：
+
+```c
+unsigned char * pen_8 = fb_base + y * var.xres * var.bits_per_pixel + x * var.bits_per_pixel;
+```
+
+修改之后。
+
+![image-20220706223608657](https://raw.githubusercontent.com/dalongmaot/arm_linux/main/imgs/image-20220706223608657.png)
+
+因为我是用mmap映射函数映射的那块内存大小有限，你上面pen_8指向越界了。
 
 
 
 
-111111111111
-
-![image-20220705001742867](E:\software\Typora\markdown笔记\嵌入式linux笔记\学习imx6ull开发板.assets\image-20220705001742867.png)
-
-
-
-测试1111
-
-![image-20220705091940039](https://gitee.com/tianfuqiang/arm_study/raw/master/Img/image-20220705091940039.png)
 
 
 
 
 
-111111111111111111
+
+
+
+
+
+
+
+
+
+
+
+
