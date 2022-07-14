@@ -1,3 +1,27 @@
+## linux操作系统家目录设置
+
+linux操作系统可以设置自己的家目录。
+
+比如韦东山老师的pc端虚拟机的Ubuntu系统，在进入系统之后他是处在/home/book目录下的，并非处在根目录下。如下图
+
+![image-20220713114628464](https://raw.githubusercontent.com/dalongmaot/arm_linux/main/imgs/image-20220713114628464.png)
+
+下面这个图的home就是自己设置进入系统后的家目录，其实是在/home/book下面的
+
+![image-20220713115111183](https://raw.githubusercontent.com/dalongmaot/arm_linux/main/imgs/image-20220713115111183.png)
+
+
+
+#### 如何找到根目录呢
+
+可以通过指令进入根目录，也可以通过文件界面    other locations  -->    computers进入，如下图
+
+![image-20220713115234372](https://raw.githubusercontent.com/dalongmaot/arm_linux/main/imgs/image-20220713115234372.png)
+
+
+
+
+
 #### [Ubuntu](https://so.csdn.net/so/search?q=Ubuntu&spm=1001.2101.3001.7020)终端无法使用复制粘贴（解决办法+快捷键设置）
 
 解决方案：[解决方案]([Ubuntu](https://so.csdn.net/so/search?q=Ubuntu&spm=1001.2101.3001.7020)终端无法使用复制粘贴（解决办法+快捷键设置）)
@@ -50,9 +74,17 @@
 
 绿色代表可执行文件。
 
+
+
 ![image-20220630151054249](C:\Users\tianfuqiang\AppData\Roaming\Typora\typora-user-images\image-20220630151054249.png)
 
 荧光蓝色代表是文件夹。文件夹删除必须用到   -r
+
+
+
+![image-20220714154712660](https://raw.githubusercontent.com/dalongmaot/arm_linux/main/imgs/image-20220714154712660.png)
+
+红色代表压缩文件。
 
 
 

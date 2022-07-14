@@ -57,3 +57,75 @@ mkdir -p   filename1/filename2/filename3       在当前目录下创建递归目
 ​			-f表示直接强制删除，没有任何提示           sudo -f   ==文件==        -f只能强制删除文件，不能强制删除文件夹。
 
 ​			-rf    对于文件夹的删除==一般用rm -rf==  （**==文件夹删除==**必须有**r**，递归删除）
+
+**Ctrl  +  Shift  +  +**              增大字体
+
+**Ctrl  +  - ：**        缩小字体
+
+**tar命令详解**：     tar命令是类Linux中常用的==解压    与   压缩命令==。
+
+可以使用命令 (man tar) 命令来进行查看tar的基本命令。下面举例说明一下tar 的基本命令。
+
+==1、tar        -cvf             sysconfig.tar          /etc/sysconfig==                被压缩的文件放在当前目录下。
+
+===								压缩后的文件名.tar       被压缩的文件目录==
+
+命令解释：**将目录/etc/sysconfig/目录下的文件打包成文件sysconfig.tar文件，并且放在当前目录中**
+
+（可以使用pwd命令查看当前路径，可以使用ls命令来查看当前文件夹）参数解释如下：
+
+-c ==创建==新的文档。										===       -c     在压缩文件时使用==
+
+**-v 显示详细的tar处理的文件信息**               这里可加可不加
+
+-f 要操作的文件名
+
+==2、tar                    -rvf                              sysconfig.tar                            /etc/sysconfig/==
+
+===                                                          
+
+命令解释：**将目录/etc/sysconfig/目录下的文件添加到文件sysconfig.tar文件中去**。参数解释如下：
+
+-r 表示增加文件，把要增加的文件追加在压缩文件的末尾。
+
+\#tar -rvf sysconfig.tar /etc/sysconfig/
+
+
+
+==3、tar                      -xvf                         sysconfig.tar==
+
+命令解释：**解压文件sysconfig.tar，将压缩文件sysconfig.tar文件解压到当前文件夹内**。参数解释如下：
+
+-x 解压文件。
+
+
+
+==tar调用程序进行压缩与解压缩。==
+
+1、tar调用gzip。
+
+**.gz结尾的文件就是调用gzip程序进行压缩的文件，相反文件以.gz结尾的文件需要使用gunzip来进行解压。tar中使用-z参数来调用gzip程序。**在这里通过举例子来进行解释。
+
+==（1）、tar                                   -czvf                                   sysconfig.tar.gz                                    /etc/sysconfig/==
+
+命令解释：将目录/etc/sysconfig/打包成一个tar文件包，通过使用-z参数来调用gzip程序，对目录/etc/sysconfig/进行压缩，
+
+压缩成文件sysconfig.tar.gz，并且将压缩成的文件放在当前文件夹内。参数解释如下：
+
+-z 调用gzip程序来压缩文件，压缩后的文件名称以.gz结尾。
+
+==（2）、tar                            -xzvf                             sysconfig.tar.gz==
+
+命令解释：这条命令是将上一条命令解压。
+
+==2、tar调用bzip2==
+
+.bz2结尾的文件就是调用bzip2程序来进行压缩的文件，相反，文件以.bz2结尾的文件需要使用bunzip2来解压。tar中==使用-j参数==来调用程序bzip2。
+
+==(1)、tar                      -cjvf                          sysconfig.tar.bz2                          /etc/sysconfig/==
+
+命令解释：将/etc/sysconfig/目录打包成一个tar包，接着使用-j参数调用bzip2来进行压缩文件，对目录/etc/sysconfig/进行压缩，压缩成文件sysconfig.tar.bz2并将其放在当前目录下。
+
+==（2）、tar                               -xjvf                                      sysconfig.tar.bz2==
+
+命令解释：解压上一个命令生成的压缩包。
